@@ -61,8 +61,7 @@ export default function mostrarPokemon(pokemon: IPokemon) {
     movimientos,
   } = pokemon;
 
-  const contenedorPokemon = <HTMLDivElement>document.querySelector('#pokemon-contenedor');
-  contenedorPokemon.style.display = 'block';
+  (<HTMLDivElement>document.querySelector('#pokemon-contenedor')).style.display = 'block';
 
   actualizarTextoAyuda('');
 
@@ -70,11 +69,9 @@ export default function mostrarPokemon(pokemon: IPokemon) {
   $imagen.setAttribute('src', foto);
   $imagen.setAttribute('alt', `Imagen frontal del pokemon ${nombre}`);
 
-  const pokemonNombre = <HTMLElement>document.querySelector('#pokemon-nombre');
-  pokemonNombre.textContent = nombre;
+  (<HTMLElement>document.querySelector('#pokemon-nombre')).textContent = nombre;
 
-  const pokemonId = <HTMLElement>document.querySelector('#pokemon-id');
-  pokemonId.textContent = String(id);
+  (<HTMLElement>document.querySelector('#pokemon-id')).textContent = String(id);
 
   mostrarTipos(tipos);
   mostrarHabilidades(habilidades);
