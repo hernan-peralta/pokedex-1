@@ -12,7 +12,7 @@ test('cambio de pagina clickeando el link 5', () => {
   document.querySelector('.page-link').click();
 
   expect(funcionCallback)
-    .toHaveBeenCalledWith(5);
+    .toHaveBeenCalledWith('5');
 });
 
 
